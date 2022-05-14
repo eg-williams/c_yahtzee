@@ -5,7 +5,7 @@ void roll_all_dice();
 
 struct game_state *setup_game(int player_count);
 
-void role_selected_dice(int diceToRoll[], size_t array_length);
+void role_selected_dice(int diceToRoll[], int array_length);
 int return_total_score(); // pass the player who's socre you want to see.
 
 void display_score_options();
@@ -37,13 +37,10 @@ struct player {
     struct upper_board_moves upper_board;
     int lower_board_total;
     int upper_board_total;
-    int to
 };
 
 struct game_state {
     struct player player_list [4];
-}
-
-
+};
 
 #endif
