@@ -3,6 +3,8 @@
 
 void roll_all_dice();
 
+struct game_state *setup_game(int player_count);
+
 void role_selected_dice(int diceToRoll[], size_t array_length);
 int return_total_score(); // pass the player who's socre you want to see.
 
@@ -16,7 +18,8 @@ int check_score_option_free(int option);
 // TODO: Check what the bonus is in Yahtzee
 int check_bonus(); // if lower is > 63, there's a 100 bonus
 
-typedef int lower_board_moves[6]; // all the moves with no special scores.
+// all the moves with no special scores.
+typedef int lower_board_moves[6]; 
 
 struct upper_board_moves{
     int three_of_a_kind;
@@ -37,6 +40,9 @@ struct player {
     int to
 };
 
+struct game_state {
+    struct player player_list [4];
+}
 
 
 
