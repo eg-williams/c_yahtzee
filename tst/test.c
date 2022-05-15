@@ -1,4 +1,4 @@
-#include <unity/unity.h>
+#include "../external/Unity/src/unity.h"
 #include "../src/yahtzee.h"
 
 void setUp(void) {
